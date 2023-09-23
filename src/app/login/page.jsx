@@ -21,7 +21,7 @@ function Login() {
     };
 
     return (
-        <div className="bg-gradient-to-r from-blue-500 to-purple-500 min-h-screen flex items-center justify-center">
+        <div className="bg-slate-200 md:min-h-screen h-[50%] flex items-center justify-center">
             <div className="bg-white p-8 rounded shadow-lg w-full sm:w-96">
                 <h2 className="text-3xl font-semibold text-center mb-6">Login</h2>
                 <form onSubmit={handleSubmit}>
@@ -33,7 +33,7 @@ function Login() {
                             type="text"
                             id="username"
                             name="username"
-                            className="w-full border-2 border-gray-300 rounded-lg px-3 py-2 focus:ring focus:ring-blue-400"
+                            className="w-full border-none outline-none  rounded-lg px-3 py-2 "
                             placeholder="Enter your username"
                             value={formData.username}
                             onChange={handleChange}
@@ -48,7 +48,7 @@ function Login() {
                             type="password"
                             id="password"
                             name="password"
-                            className="w-full border-2 border-gray-300 rounded-lg px-3 py-2 focus:ring focus:ring-blue-400"
+                            className="w-full border-none outline-none  rounded-lg px-3 py-2"
                             placeholder="Enter your password"
                             value={formData.password}
                             onChange={handleChange}
