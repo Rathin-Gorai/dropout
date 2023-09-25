@@ -16,6 +16,7 @@ function Registration() {
         school: '',
         schoolCode: '',
         password: '',
+        password_1:''
     });
 
     const handleChange = (e) => {
@@ -44,7 +45,7 @@ function Registration() {
 
 
     return (
-        <div className="bg-gradient-to-r from-blue-500 to-purple-500 min-h-screen flex items-center justify-center py-6">
+        <div className="bg-gradient-to-r from-blue-500 to-purple-500 min-h-screen flex items-center justify-center py-40 ">
             <div className="bg-white p-8 rounded shadow-lg w-[90%] ">
                 <h2 className="text-3xl font-semibold text-center mb-6">Registration</h2>
                 <form onSubmit={handleSubmit}>
@@ -217,7 +218,7 @@ function Registration() {
                                 name="schoolCode"
                                 className="w-full border-2 border-gray-300 rounded-lg px-3 py-2 focus:ring focus:ring-blue-400"
                                 placeholder="Enter your contact number"
-                                value={formData.contact}
+                                value={formData.schoolCode}
                                 onChange={handleChange}
                                 required
                             />
@@ -247,7 +248,7 @@ function Registration() {
                                 name="password"
                                 className="w-full border-2 border-gray-300 rounded-lg px-3 py-2 focus:ring focus:ring-blue-400"
                                 placeholder="Enter your Password"
-                                value={formData.password}
+                                value={formData.password_1}
                                 onChange={handleChange}
                                 required
                             />

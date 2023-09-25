@@ -3,10 +3,10 @@ import React from 'react';
 
 const Service = () => {
   return (
-    <div className=" bg-gray-100">
+    <div className=" bg-white pt-28">
       <div className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white overflow-hidden shadow-xl rounded-lg">
+          <div className=" overflow-hidden ">
             <div className="px-4 py-5 sm:p-6">
               <h2 className="text-2xl font-semibold text-gray-900">Our Services</h2>
               <div className="mt-4 text-gray-600">
