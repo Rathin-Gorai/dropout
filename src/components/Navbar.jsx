@@ -17,7 +17,7 @@ const Navbar = () => {
             <div className="flex items-center gap-2 justify-between  md:mb-0 bg-white p-2">
                 <div className="flex items-center">
                     <div className="w-12 h-12 bg-gray-300 rounded-full">
-                        <Image src="/logo.png" height={48} width={48} />
+                        <Image src="/logo.png" alt="logo" height={48} width={48} />
                     </div>
                     <p className="ml-2 font-semibold md:text-sm text-black text-xs">Government of Gujarat</p>
                 </div>
@@ -30,7 +30,7 @@ const Navbar = () => {
             </div>
             <nav className="md:py-2  px-0 md:px-6 bg-white flex flex-row items-center justify-between relative">
                 <div className="flex items-center md:ml-0 ml-2">
-                    <Image src={'/edu.png'} height={48} width={48} />
+                    <Image src={'/edu.png'} alt="edu" height={48} width={48} />
                     <h1 className="md:text-3xl text-2xl font-bold ">Edu Focus</h1>
                 </div>
                 <div className="md:hidden">
@@ -52,7 +52,7 @@ const Navbar = () => {
                             <Link href={"/"} className="block text-slate-950 hover:text-slate-900">Home</Link>
                         </li>
                         <li className="md:p-0 p-3">
-                            <Link href={"/links"} className="block text-slate-950 hover:text-slate-900">Links</Link>
+                            <Link href={"/service"} className="block text-slate-950 hover:text-slate-900">Services</Link>
                         </li>
                         <li className="md:p-0 p-3">
                             <Link href={"/about"} className="block text-slate-950 hover:text-slate-900">About Us</Link>

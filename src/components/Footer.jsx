@@ -1,4 +1,5 @@
-import React from 'react';
+// import React from 'react';
+import Link from "next/link";
 
 const Footer = () => {
     return (
@@ -9,7 +10,7 @@ const Footer = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
                         </svg>
-                        <span className="ml-3 text-xl">Tailblocks</span>
+                        <span className="ml-3 text-xl">Edu Focus</span>
                     </a>
                     <p className="mt-2 text-sm text-gray-500">Air plant banjo lyft occupy retro adaptogen indego</p>
                 </div>
@@ -18,50 +19,16 @@ const Footer = () => {
                         <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
                         <nav className="list-none mb-10">
                             <li>
-                                <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                                <Link href="/" className="text-gray-600 hover:text-gray-800">Home</Link>
                             </li>
                             <li>
-                                <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                                <Link href="/service" className="text-gray-600 hover:text-gray-800">Services</Link>
                             </li>
                             <li>
-                                <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+                                <Link href={"/about"} className="text-gray-600 hover:text-gray-800">About us</Link>
                             </li>
                             <li>
-                                <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
-                            </li>
-                        </nav>
-                    </div>
-                    <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                        <nav className="list-none mb-10">
-                            <li>
-                                <a className="text-gray-600 hover:text-gray-800">First Link</a>
-                            </li>
-                            <li>
-                                <a className="text-gray-600 hover:text-gray-800">Second Link</a>
-                            </li>
-                            <li>
-                                <a className="text-gray-600 hover:text-gray-800">Third Link</a>
-                            </li>
-                            <li>
-                                <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
-                            </li>
-                        </nav>
-                    </div>
-                    <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                        <nav className="list-none mb-10">
-                            <li>
-                                <a className="text-gray-600 hover:text-gray-800">First Link</a>
-                            </li>
-                            <li>
-                                <a className="text-gray-600 hover:text-gray-800">Second Link</a>
-                            </li>
-                            <li>
-                                <a className="text-gray-600 hover:text-gray-800">Third Link</a>
-                            </li>
-                            <li>
-                                <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                                <Link href="/contact" className="text-gray-600 hover:text-gray-800">Contact us</Link>
                             </li>
                         </nav>
                     </div>
@@ -86,7 +53,7 @@ const Footer = () => {
             </div>
             <div className="bg-gray-100">
                 <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                    <p className="text-gray-500 text-sm text-center sm:text-left">© 2020 Tailblocks —
+                    <p className="text-gray-500 text-sm text-center sm:text-left"> Edu Focus —
                         <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">@knyttneve</a>
                     </p>
                     <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
