@@ -14,25 +14,27 @@ const Navbar = () => {
     return (
         // <header className="bg-white text-black md:h-[100px] p-4 md:px-2 ">
         <>
-            <div className="flex items-center gap-2 justify-between  md:mb-0 bg-white p-2">
+        <div className="fixed w-full  z-10 md-50">
+            <div className="flex items-center gap-2 justify-between  md:mb-0 bg-white p-2 bg-blue-50">
                 <div className="flex items-center">
                     <div className="w-12 h-12 bg-gray-300 rounded-full">
-                        <Image src="/logo.png" height={48} width={48} />
+                        <Image src="/logo.png" alt="logo" height={48} width={48} />
                     </div>
                     <p className="ml-2 font-semibold md:text-sm text-black text-xs">Government of Gujarat</p>
                 </div>
                 <div className="mr-4">
-                    <button className="px-4 py-2 bg-slate-950 text-white rounded-md flex items-center justify-center hover:bg-slate-900">
-                        <Link href={'/login'} className="text-xs md:text-sm ">Login/SignUp</Link>
+                    <button className="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-6 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <Link href={'/login'} className="text-xs md:text-sm ">Login/Register</Link>
                     </button>
 
                 </div>
             </div>
-            <nav className="md:py-2  px-0 md:px-6 bg-white flex flex-row items-center justify-between relative">
+            <nav className="md:py-2  px-0 md:px-6 bg-white flex flex-row items-center justify-between relative bg-blue-100 fixed top-0 w-full">
+                <Link  href="/">
                 <div className="flex items-center md:ml-0 ml-2">
-                    <Image src={'/edu.png'} height={48} width={48} />
+                    <Image src={'/edu.png'} alt="edu" height={48} width={48} />                    
                     <h1 className="md:text-3xl text-2xl font-bold ">Edu Focus</h1>
-                </div>
+                </div></Link>
                 <div className="md:hidden">
                     <button
                         onClick={toggleMenu}
@@ -47,24 +49,25 @@ const Navbar = () => {
                     className={`${!isOpen ? 'block absolute w-[100%]  bg-red-300 top-[100%] z-40  duration-500 transition' : 'hidden'
                         } md:flex md:items-center`}
                 >
-                    <ul className="md:flex md:space-x-4 mt-4 md:mt-0 text-center">
+                    <ul className="md:flex md:space-x-4 mt-4 md:mt-0 text-center font-bold ">
                         <li className="md:p-0 p-3">
-                            <Link href={"/"} className="block text-slate-950 hover:text-slate-900">Home</Link>
+                            <Link href={"/"} className="block text-slate-950 hover:text-blue-500 hover:underline">Home</Link>
                         </li>
                         <li className="md:p-0 p-3">
-                            <Link href={"/links"} className="block text-slate-950 hover:text-slate-900">Links</Link>
+                            <Link href={"/service"} className="block text-slate-950 hover:text-blue-500 hover:underline">Services</Link>
                         </li>
                         <li className="md:p-0 p-3">
-                            <Link href={"/about"} className="block text-slate-950 hover:text-slate-900">About Us</Link>
+                            <Link href={"/about"} className="block text-slate-950 hover:text-blue-500 hover:underline">About Us</Link>
                         </li>
                         <li className="md:p-0 p-3">
-                            <Link href={"/contact"} className="block text-slate-950 hover:text-slate-900">Contact Us</Link>
+                            <Link href={"/contact"} className="block text-slate-950 hover:text-blue-500 hover:underline">Contact Us</Link>
                         </li>
                     </ul>
                 </div>
 
 
             </nav>
+            </div>
         </>
         // </header>
 

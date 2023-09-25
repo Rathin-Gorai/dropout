@@ -69,7 +69,7 @@ function Login() {
                 </div>
                 <div className="mt-4 text-center">
                     <p className="text-gray-600">
-                        Don't have an account?{' '}
+                        Don&rsquo;t have an account?{' '}
                         <Link href="/signup" className="text-blue-500 hover:underline">
                             Register
                         </Link>
