@@ -86,14 +86,14 @@ const Contact = () => {
               <div className="mt-6 text-gray-600">
                 <h3 className="text-lg font-semibold">Visit Us:</h3>
                 <p>
-                  If you are in the vicinity of our headquarters and would like to meet with our team in person, please don't hesitate to schedule an appointment. We look forward to welcoming you.
+                  If you are in the vicinity of our headquarters and would like to meet with our team in person, please don&rsquo;t hesitate to schedule an appointment. We look forward to welcoming you.
                 </p>
               </div>
 
               <div className="mt-6 text-gray-600">
                 <h3 className="text-lg font-semibold">Stay Connected:</h3>
                 <p>
-                  Join our community and stay informed about the latest developments, research, and success stories in the field of education by subscribing to our newsletter. By subscribing, you'll receive regular updates on our initiatives, policy recommendations, and the impact we're making.
+                  Join our community and stay informed about the latest developments, research, and success stories in the field of education by subscribing to our newsletter. By subscribing, you&rsquo;ll receive regular updates on our initiatives, policy recommendations, and the impact we&rsquo;re making.
                 </p>
               </div>
             </div>

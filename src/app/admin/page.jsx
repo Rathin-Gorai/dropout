@@ -67,14 +67,6 @@ function Login() {
                         Forgot Password?
                     </Link>
                 </div>
-                <div className="mt-4 text-center">
-                    <p className="text-gray-600">
-                        Don&rsquo;t have an account?{' '}
-                        <Link href="/signup" className="text-blue-500 hover:underline">
-                            Register
-                        </Link>
-                    </p>
-                </div>
             </div>
         </div>
     );

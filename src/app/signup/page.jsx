@@ -254,12 +254,14 @@ function Registration() {
                             />
                         </div>
                     </div>
+                    <div className="flex items-center justify-center">
                     <button
                         type="submit"
-                        className="bg-blue-500 text-white rounded-lg py-2 px-4 hover:bg-blue-600 focus:outline-none focus:bg-blue-600 w-[80%] mt-4"
+                        className="bg-blue-500 text-white rounded-lg py-2 px-4 hover:bg-blue-600 focus:outline-none focus:bg-blue-600 w-[50%] mt-4 "
                     >
                         Register
                     </button>
+                    </div>
                 </form>
                 <div className="mt-4 text-center">
                     <p className="text-gray-600">
