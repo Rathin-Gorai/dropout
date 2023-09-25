@@ -20,7 +20,7 @@ const Card = () => {
                 <div className="relative">
                     <img src={'/pic.png'} alt={'jjj'} className="w-full" />
                     <div className="absolute inset-0 bg-black opacity-50"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="md:absolute md:inset-0 md:flex md:items-center md:justify-center hidden">
                         <div className="text-white text-center">
                             <h2 className="text-2xl font-semibold mb-4">Inspire and facilitate nationwide education reform by reducing school dropout rates through data-driven insights and policy advocacy.</h2>
                             <Link href="/#chart">
@@ -34,7 +34,7 @@ const Card = () => {
                 <div className="relative">
                     <img src={'/pic1.avif'} alt={'jjj'} className="w-full" />
                     <div className="absolute inset-0 bg-black opacity-50"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="md:absolute md:inset-0 md:flex md:items-center md:justify-center hidden">
                         <div className="text-white text-center">
                             <h2 className="text-2xl font-semibold mb-4">Inspire and facilitate nationwide education reform by reducing school dropout rates through data-driven insights and policy advocacy.</h2>
                             <button className="bg-slate-950 hover:bg-blue-600 text-white font-semibold py-4 px-8 rounded-full shadow-md hover:shadow-lg transition duration-300 ease-in-out">
