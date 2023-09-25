@@ -19,7 +19,7 @@ const About = () => {
               <div className="mt-6 text-gray-600">
                 <h3 className="text-lg font-semibold">Our Dedicated Team</h3>
                 <p>
-                  EduFocus is more than just a name; it's a dedicated team of educators, data scientists, policy experts, and passionate individuals united by a common purpose – to make education accessible to all. Our diverse backgrounds and expertise converge to create a unique synergy that fuels our mission.
+                  EduFocus is more than just a name; it&rsquo;s a dedicated team of educators, data scientists, policy experts, and passionate individuals united by a common purpose – to make education accessible to all. Our diverse backgrounds and expertise converge to create a unique synergy that fuels our mission.
                 </p>
                 <p>
                   Our educators understand the challenges faced in the classroom, while our data scientists possess the analytical prowess to extract insights from raw data. Our policy experts bridge the gap between data and action, ensuring that our insights translate into effective policies.
@@ -52,3 +52,4 @@ const About = () => {
 };
 
 export default About;
+

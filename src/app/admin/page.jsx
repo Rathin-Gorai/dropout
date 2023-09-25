@@ -21,7 +21,7 @@ function Login() {
     };
 
     return (
-        <div className="bg-slate-200 md:min-h-screen h-[50%] flex items-center justify-center">
+        <div className="bg-slate-200 md:min-h-screen h-[50%] pt-28 flex items-center justify-center">
             <div className="bg-white p-8 rounded shadow-lg w-full sm:w-96">
                 <h2 className="text-3xl font-semibold text-center mb-6">Admin Login </h2>
                 <form onSubmit={handleSubmit}>
