@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const VerticalBarChart = () => {
   return (
     <>
@@ -73,3 +74,4 @@ const VerticalBarChart = () => {
 };
 
 export default VerticalBarChart;
+

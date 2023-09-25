@@ -21,9 +21,9 @@ function Login() {
     };
 
     return (
-        <div className="bg-gradient-to-r from-blue-500 to-purple-500 min-h-screen flex items-center justify-center pt-28">
+        <div className="bg-slate-200 md:min-h-screen h-[50%] flex items-center justify-center">
             <div className="bg-white p-8 rounded shadow-lg w-full sm:w-96">
-                <h2 className="text-3xl font-semibold text-center mb-6">Login</h2>
+                <h2 className="text-3xl font-semibold text-center mb-6">Admin Login </h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
                         <label htmlFor="username" className="block text-gray-700 font-semibold mb-2">
