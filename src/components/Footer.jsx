@@ -3,13 +3,9 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-<<<<<<< HEAD
-        <footer className=" text-gray-600 body-font bg-blue-100 flex justify-center ">
-            <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col md:justify-center justify-start">
-=======
         <footer className=" text-gray-600 body-font bg-blue-100">
             <div className="container px-5 py-24 mx-auto flex md:justify-center md:items-center lg:items-start md:flex-row flex-wrap flex-col">
->>>>>>> 26899119408a6104a7dba19e2fc4e56ff4903409
+
                 <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
                     <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
@@ -58,10 +54,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 26899119408a6104a7dba19e2fc4e56ff4903409
         </footer>
     );
 };
