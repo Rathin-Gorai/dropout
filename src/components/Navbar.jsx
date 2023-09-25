@@ -44,8 +44,8 @@ const Navbar = () => {
 
                 {/* Navigation Links */}
                 <div
-                    className={`${!isOpen ? 'block absolute w-[100%]  bg-red-300 top-[100%] z-40  duration-500 transition' : 'hidden'
-                        } md:flex md:items-center`}
+                    className={`${!isOpen ? 'block absolute w-[100%]  bg-slate-100 top-[100%] z-40' : 'hidden'
+                        } md:flex  md:items-center `}
                 >
                     <ul className="md:flex md:space-x-4 mt-4 md:mt-0 text-center">
                         <li className="md:p-0 p-3">
