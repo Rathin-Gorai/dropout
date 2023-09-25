@@ -19,7 +19,7 @@ const About = () => {
               <div className="mt-6 text-gray-600">
                 <h3 className="text-lg font-semibold">Our Dedicated Team</h3>
                 <p>
-                  EduFocus is more than just a name; it's a dedicated team of educators, data scientists, policy experts, and passionate individuals united by a common purpose – to make education accessible to all. Our diverse backgrounds and expertise converge to create a unique synergy that fuels our mission.
+                  EduFocus is more than just a name; it&rsquo;s a dedicated team of educators, data scientists, policy experts, and passionate individuals united by a common purpose - to make education accessible to all. Our diverse backgrounds and expertise converge to create a unique synergy that fuels our mission.
                 </p>
                 <p>
                   Our educators understand the challenges faced in the classroom, while our data scientists possess the analytical prowess to extract insights from raw data. Our policy experts bridge the gap between data and action, ensuring that our insights translate into effective policies.
@@ -32,13 +32,13 @@ const About = () => {
                 </p>
                 <ul className="list-disc pl-6">
                   <li>
-                    <strong>Data Collection and Analysis:</strong> We believe that data is the key to unlocking change. We work tirelessly to collect comprehensive data on dropout rates from schools across diverse communities. But we don't stop at data collection; our team of data scientists conducts rigorous analysis, delving deep into the data to uncover trends, patterns, and disparities.
+                    <strong>Data Collection and Analysis:</strong> We believe that data is the key to unlocking change. We work tirelessly to collect comprehensive data on dropout rates from schools across diverse communities. But we don&rsquo;t stop at data collection; our team of data scientists conducts rigorous analysis, delving deep into the data to uncover trends, patterns, and disparities.
                   </li>
                   <li>
-                    <strong>Policy Recommendations:</strong> Data alone is not enough. It must inform action. That's where our policy experts come in. We collaborate closely with government authorities and educational institutions to translate data-driven insights into impactful policies. These policies are designed to target the root causes of dropout rates, ensuring that interventions are efficient and effective.
+                    <strong>Policy Recommendations:</strong> Data alone is not enough. It must inform action. That&rsquo;s where our policy experts come in. We collaborate closely with government authorities and educational institutions to translate data-driven insights into impactful policies. These policies are designed to target the root causes of dropout rates, ensuring that interventions are efficient and effective.
                   </li>
                   <li>
-                    <strong>Support and Training:</strong> But transformation doesn't happen in isolation; it happens within schools and communities. That's why we are committed to providing support and training to schools and local stakeholders. We believe in empowering communities with the knowledge and tools needed to drive change from within.
+                    <strong>Support and Training:</strong> But transformation doesn&rsquo;t happen in isolation; it happens within schools and communities. That&rsquo;s why we are committed to providing support and training to schools and local stakeholders. We believe in empowering communities with the knowledge and tools needed to drive change from within.
                   </li>
                 </ul>
               </div>
