@@ -18,6 +18,7 @@ const Footer = () => {
                     <div className="lg:w-1/4 md:w-1/2 w-full px-4">
                         <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"><b>Useful Links</b></h2>
                         <nav className="list-none mb-10">
+                        <b>
                             <li>
                                 <Link href="/" className="text-gray-600 hover:text-gray-800">Home</Link>
                             </li>
@@ -30,6 +31,7 @@ const Footer = () => {
                             <li>
                                 <Link href="/contact" className="text-gray-600 hover:text-gray-800">Contact us</Link>
                             </li>
+                            </b>
                         </nav>
                     </div>
                     <div className="lg:w-1/4 md:w-1/2 w-full px-4">
@@ -54,7 +56,7 @@ const Footer = () => {
             <div className="bg-gray-100">
                 <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
                     <p className="text-gray-500 text-sm text-center sm:text-left"> Edu Focus —
-                        <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">@knyttneve</a>
+                        <a href="/" rel="noopener noreferrer" className="text-gray-600 ml-1">Gujrat</a>
                     </p>
                     <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
                         <a className="text-gray-500">

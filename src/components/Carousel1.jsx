@@ -15,7 +15,7 @@ const Card = () => {
                 showArrows={false}
                 showIndicators={false}
                 showThumbs={false}
-                className="bg-slate-200 z-10">
+                className="bg-slate-200 z-10 pt-28 ">
 
                 <div className="relative">
                     <img src={'/pic.png'} alt={'jjj'} className="w-full" />
@@ -32,7 +32,7 @@ const Card = () => {
                     </div>
                 </div>
                 <div className="relative">
-                    <img src={'/pic1.avif'} alt={'jjj'} className="w-full" />
+                    <img src={'/pic.png'} alt={'jjj'} className="w-full" />
                     <div className="absolute inset-0 bg-black opacity-50"></div>
                     <div className="md:absolute md:inset-0 md:flex md:items-center md:justify-center hidden">
                         <div className="text-white text-center">
