@@ -4,6 +4,7 @@ import HeroSection from '@/components/HeroSection'
 
 
 import TestimonialsSection from '@/components/Data'
+import ChartDemo from '@/components/ChartDemo'
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <Card />
       <HeroSection />
       <hr />
-      Chart
+      <ChartDemo/>
       <TestimonialsSection />
     </>
   )
