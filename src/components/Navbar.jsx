@@ -14,7 +14,7 @@ const Navbar = () => {
     return (
         // <header className="bg-white text-black md:h-[100px] p-4 md:px-2 ">
         <>
-            <div className="fixed w-full   z-10 md-50">
+            <div className="w-full   z-10 md-50">
                 <div className="flex items-center gap-2 justify-between  md:mb-0 p-2 bg-blue-50">
                     <div className="flex items-center">
                         <div className="w-12 h-12 bg-gray-300 rounded-full">

@@ -40,15 +40,15 @@ function Registration() {
 
     const blockOptions = ['Block- 1', 'Block- 2'];
 
-    const schoolOptions = ['School-1','School-2'];
+    const schoolOptions = ['School-1', 'School-2'];
 
 
     return (
-        <div className="bg-gradient-to-r from-blue-500 to-purple-500 min-h-screen flex items-center justify-center">
-            <div className="bg-white p-8 rounded shadow-lg w-full sm:w-96">
+        <div className="bg-gradient-to-r from-blue-500 to-purple-500 min-h-screen flex items-center justify-center py-6">
+            <div className="bg-white p-8 rounded shadow-lg w-[90%] ">
                 <h2 className="text-3xl font-semibold text-center mb-6">Registration</h2>
                 <form onSubmit={handleSubmit}>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
                         <div className="mb-4">
                             <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
                                 Name
@@ -204,7 +204,7 @@ function Registration() {
                                 ))}
                             </select>
                             <p className="text-gray-500 text-sm mt-1">
-                                
+
                             </p>
                         </div>
                         <div className="mb-4">
@@ -232,14 +232,14 @@ function Registration() {
                                 name="password"
                                 className="w-full border-2 border-gray-300 rounded-lg px-3 py-2 focus:ring focus:ring-blue-400"
                                 placeholder="Enter your Password"
-                                value={formData.contact}
+                                value={formData.password}
                                 onChange={handleChange}
                                 required
                             />
                         </div>
                         <div className="mb-4">
                             <label htmlFor="password" className="block text-gray-700 font-semibold mb-2">
-                               Confirm Password
+                                Confirm Password
                             </label>
                             <input
                                 type="password"
@@ -247,7 +247,7 @@ function Registration() {
                                 name="password"
                                 className="w-full border-2 border-gray-300 rounded-lg px-3 py-2 focus:ring focus:ring-blue-400"
                                 placeholder="Enter your Password"
-                                value={formData.contact}
+                                value={formData.password}
                                 onChange={handleChange}
                                 required
                             />
@@ -255,7 +255,7 @@ function Registration() {
                     </div>
                     <button
                         type="submit"
-                        className="bg-blue-500 text-white rounded-lg py-2 px-4 hover:bg-blue-600 focus:outline-none focus:bg-blue-600 w-full mt-4"
+                        className="bg-blue-500 text-white rounded-lg py-2 px-4 hover:bg-blue-600 focus:outline-none focus:bg-blue-600 w-[80%] mt-4"
                     >
                         Register
                     </button>
