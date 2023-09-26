@@ -23,7 +23,7 @@ const Navbar = () => {
                         <p className="ml-2 font-semibold md:text-sm text-black text-xs">Government of Gujarat</p>
                     </div>
                     <div className="mr-4">
-                        <button className="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-6 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <button className="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-6 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 flex items-center justify-center">
                             <Link href={'/login'} className="text-xs md:text-sm ">Login/Register</Link>
                         </button>
 
