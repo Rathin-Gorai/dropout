@@ -1,7 +1,7 @@
 // src/components/ContactForm.js
 'use client'
 import { useState } from 'react';
-
+import toast from 'react-hot-toast';
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -21,34 +21,49 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-        const response = await fetch('/api/contact', {
-            method:'POST',
-            headers:{"Content-Type":"application/json"},
-            body: JSON.stringify({
-                name:formData.name,
-                email:formData.email,
-                message:formData.message
-            })
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
         })
-        // Set the status based on the response from the API route
-        if (response.status === 200) {
-            setUser({
-                username: "",
-                email: "",
-                phone: "",
-                message: ""
-            })
-            setStatus('success');
-        } else {
-            setStatus('error');
-        }
+      })
 
-    }catch (e) {
-        console.log(e)
+      // Set the status based on the response from the API route
+      if (response.status === 200) {
+        setFormData({
+          name: "",
+          email: "",
+
+          message: ""
+        })
+        toast.success(`${formData.name} Your message was sucessfully sent Thank you`)
+      } else {
+        toast.error("Something went Wrong")
+      }
+
+    } catch (e) {
+      console.log(e)
     }
 
-}
-  
+
+    const response = await fetch('/api/sendemail', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        name:formData.name,
+        email: formData.email
+      })
+    })
+    console.log(await response.json())
+
+  }
+
+
 
   return (
     <div className="max-w-md mx-auto p-4">
