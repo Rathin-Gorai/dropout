@@ -36,7 +36,6 @@ const ContactForm = () => {
         setFormData({
           name: "",
           email: "",
-
           message: ""
         })
         toast.success(`${formData.name} Your message was sucessfully sent Thank you`)
