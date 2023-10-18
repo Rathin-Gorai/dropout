@@ -26,7 +26,7 @@ const Charts = () => {
         [6.5, 7]
     ];
     return (
-        <section className='md:px-[60px] px-[1.25rem] py-[1rem] relative flex flex-col' data-aos='fade-left'>
+        <section className='md:px-[60px] px-[1.25rem] py-[1rem] relative flex flex-col' data-aos='fade-right'>
             <h3 className="text-center text-4xl font-bold mb-8">Charts</h3>
             <div className='flex flex-col md:flex-row'>
                 <Chart

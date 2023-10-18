@@ -10,7 +10,7 @@ const HeroSection = () => {
     }, [])
 
     return (
-        <section className='md:px-[60px] px-[1.25rem] md:py-20 py-[1rem] ' data-aos='fade-left'>
+        <section className='md:px-[60px] px-[1.25rem] md:py-20 py-[1rem] ' data-aos='fade-right'>
             <div>
                 <h3 className="text-center text-4xl font-bold mb-8">Our Mission</h3>
                 <p className="">

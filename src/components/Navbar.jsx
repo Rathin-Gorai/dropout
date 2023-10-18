@@ -9,14 +9,14 @@ const Navbar = () => {
     const [istoggle, setIstoggle] = useState(false)
 
     return (
-        <nav className={`fixed top-0 z-10  w-full bg-white py-5 lg:px-[60px] px-5 flex justify-between items-center`}>
+        <nav className={` bg-white py-5 lg:px-[60px] px-5 flex justify-between items-center`}>
             <div>
                 <Link href="/">
                     {/* <Image src={"/images/logo.png"} alt="Logo" width={72} height={36}/> */}
                     <p className="text-2xl font-bold">Edu<span className="text-blue-400">Focus</span></p>
                 </Link>
             </div>
-            <ul className={`md:flex justify-between z-20  items-center gap-6 transition-all duration-500 absolute md:relative md:right-0 md:h-auto md:w-[auto] md:py-0 md:px-0 md:bg-white ${istoggle ? "top-0 right-[0] h-screen bg-slate-200 w-[80%] py-20 px-10" : "top-0 right-[-100%] h-screen w-[80%] py-20 px-10"}`}>
+            <ul className={`md:flex justify-between z-20  items-center gap-6 transition-all duration-500 ${istoggle ? "absolute  top-0 right-[0] h-screen bg-slate-200 w-[80%] py-20 px-10" : "hidden"}`}>
                 <li className="text-gray-900 cursor-pointer transition-all hover:font-bold pb-5 md:pb-0 ">
                     <Link href={'/'}>Home</Link>
                 </li>

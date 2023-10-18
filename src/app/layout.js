@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}  >
         <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
         <Navbar />
-        <main className='relative flex flex-col'>
+        <main className='w-full flex flex-col'>
           {children}
         </main>
         <Footer />
