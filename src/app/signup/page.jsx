@@ -1,8 +1,7 @@
-// src/components/Register.js
 'use client'
-// src/components/Registration.js
 import Link from 'next/link';
 import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 
 function Registration() {
     const [formData, setFormData] = useState({
@@ -24,11 +23,52 @@ function Registration() {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Add your registration logic here using formData
-        console.log('Form data submitted:', formData);
-    };
+    
+        try {
+          const response = await fetch('/api/user/signup', {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                name:formData.name,
+                gender:formData.gender,
+                dob:formData.dob,
+                contact:formData.contact,
+                email:formData.email,
+                district:formData.district,
+                block:formData.block,
+                school:formData.school,
+                schoolCode:formData.schoolCode,
+                password:formData.password
+            })
+          })
+    
+          // Set the status based on the response from the API route
+          if (response.status === 200) {
+            setFormData({
+                name:'',
+                gender:'',
+                dob:'',
+                contact:'',
+                email:'',
+                district:'',
+                block:'',
+                school:'',
+                schoolCode:'',
+                password:'',
+                password_1:''
+            })
+            toast.success(`${formData.name} You have successfully Registerd please verify your email.`)
+          } else {
+            toast.error("Something went Wrong")
+          }
+    
+        } catch (e) {
+          console.log(e)
+        }
+    
+      }
 
     const districtOptions = [
         'District A',
@@ -104,10 +144,10 @@ function Registration() {
                         </div>
                         <div className="mb-4">
                             <label htmlFor="contact" className="block text-gray-700 font-semibold mb-2">
-                                Contact
+                                Contact Number
                             </label>
                             <input
-                                type="text"
+                                type="number"
                                 id="contact"
                                 name="contact"
                                 className="w-full border-2 border-gray-300 rounded-lg px-3 py-2 focus:ring focus:ring-blue-400"
@@ -244,8 +284,8 @@ function Registration() {
                             </label>
                             <input
                                 type="password"
-                                id="password"
-                                name="password"
+                                id="password_1"
+                                name="password_1"
                                 className="w-full border-2 border-gray-300 rounded-lg px-3 py-2 focus:ring focus:ring-blue-400"
                                 placeholder="Enter your Password"
                                 value={formData.password_1}
@@ -256,7 +296,7 @@ function Registration() {
                     </div>
                     <div className="flex items-center justify-center">
                     <button
-                        type="submit"
+                        onClick={handleSubmit}
                         className="bg-blue-500 text-white rounded-lg py-2 px-4 hover:bg-blue-600 focus:outline-none focus:bg-blue-600 w-[50%] mt-4 "
                     >
                         Register
