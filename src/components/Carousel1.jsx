@@ -1,53 +1,31 @@
-'use client'
+"use client"
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Link from 'next/link';
-
+import Image from "next/image";
 
 const Card = () => {
-    
-    return (
-        <>
 
-            <Carousel autoPlay={true}
-                showStatus={false}
+    return (
+        <section className=" relative flex items-center justify-center">
+            <Carousel
+                transitionTime={400}
                 infiniteLoop={true}
+
+                showStatus={false}
                 showArrows={false}
+                autoPlay={true}
                 showIndicators={false}
                 showThumbs={false}
-                className="bg-slate-200 z-10 pt-28 ">
-
-                <div className="relative">
-                    <img src={'/pic.png'} alt={'jjj'} className="w-full" />
-                    <div className="absolute inset-0 bg-black opacity-50"></div>
-                    <div className="md:absolute md:inset-0 md:flex md:items-center md:justify-center hidden">
-                        <div className="text-white text-center">
-                            <h2 className="text-2xl font-semibold mb-4">Inspire and facilitate nationwide education reform by reducing school dropout rates through data-driven insights and policy advocacy.</h2>
-                            <Link href="/#chart">
-                            <button className="bg-slate-950 hover:bg-blue-600 text-white font-semibold py-4 px-8 rounded-full shadow-md hover:shadow-lg transition duration-300 ease-in-out">
-                              View Reports
-                            </button>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="relative">
-                    <img src={'/pic.png'} alt={'jjj'} className="w-full" />
-                    <div className="absolute inset-0 bg-black opacity-50"></div>
-                    <div className="md:absolute md:inset-0 md:flex md:items-center md:justify-center hidden">
-                        <div className="text-white text-center">
-                            <h2 className="text-2xl font-semibold mb-4">Inspire and facilitate nationwide education reform by reducing school dropout rates through data-driven insights and policy advocacy.</h2>
-                            <button className="bg-slate-950 hover:bg-blue-600 text-white font-semibold py-4 px-8 rounded-full shadow-md hover:shadow-lg transition duration-300 ease-in-out">
-                              View Reports
-                            </button>
-                        </div>
-                    </div>
+            >
+                <div>
+                    <Image src={'/img1.webp'} height={400} width={1000} />
                 </div>
 
+                <div>
+                    <Image src={'/img3.jpg'} height={400} width={1000} />
+                </div>
             </Carousel>
-
-
-        </>
+        </section>
     )
 }
 

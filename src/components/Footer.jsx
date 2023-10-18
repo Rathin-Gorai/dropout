@@ -1,62 +1,110 @@
-// import React from 'react';
-import Link from "next/link";
-
+"use client"
+import { useEffect } from "react"
+import Aos from "aos"
+import 'aos/dist/aos.css'
+import Link from 'next/link'
 const Footer = () => {
+    useEffect(() => {
+        Aos.init({
+            duration: 1000,
+        })
+    }, [])
     return (
-        <footer className=" text-gray-600 body-font bg-blue-100">
-            <div className="container px-5 py-24 mx-auto flex md:justify-center md:items-center lg:items-start md:flex-row flex-wrap flex-col">
+        <footer className=' mt-10 flex items-center justify-center mb-24' data-aos='fade-left'>
+            <div className='md:px-[60px] px-[1.25rem] mx-auto max-w-[1440px] flex  flex-col gap-14 w-full'>
+                <div className='flex flex-col items-start justify-center gap-[10%] md:flex-row' >
+                    <Link href={'/'} className=' mb-10'>
+                        {/* <Image src={"/images/logo.png"} alt="Logo" width={72} height={36}/> */}
+                        <p className="text-2xl font-bold">Edu<span className="text-blue-400">Focus</span></p>
+                    </Link>
 
-                <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-                    <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                        </svg>
-                        <span className="ml-3 text-xl">Edu Focus</span>
-                    </a>
-                    <p className="mt-2 text-sm text-gray-500">Together for Tomorrow: Educate, Engage, Eradicate Dropout</p>
-                </div>
-                <div className=" md:justify-between flex md:flex-nowrap flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-                    <div className="w-full px-4">
-                        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"><b>Useful Links</b></h2>
-                        <nav className="list-none mb-10">
-                            <b>
+                    <div className=' flex flex-wrap gap-10 sm:justify-between md:flex-1'>
+                        <div className='flex flex-col gap-5 '>
+                            <h4 className='font-bold whitespace-nowrap text-xl'>
+                                Links
+                            </h4>
+                            <ul className='flex flex-col gap-4 text-gray-900'>
                                 <li>
-                                    <Link href="/" className="text-gray-600 hover:text-gray-800">Home</Link>
+                                    <Link href={'/'}>Home</Link>
                                 </li>
                                 <li>
-                                    <Link href="/service" className="text-gray-600 hover:text-gray-800">Services</Link>
+                                    <Link href={'/'}>About Us</Link>
                                 </li>
                                 <li>
-                                    <Link href={"/about"} className="text-gray-600 hover:text-gray-800">About us</Link>
+                                    <Link href={'/'}>Social Links</Link>
                                 </li>
                                 <li>
-                                    <Link href="/contact" className="text-gray-600 hover:text-gray-800">Contact us</Link>
+                                    <Link href={'/'}>Contact Us</Link>
                                 </li>
-                            </b>
-                        </nav>
+                            </ul>
+                        </div>
+                        <div className='flex flex-col gap-5 '>
+                            <h4 className='font-bold whitespace-nowrap text-xl'>
+                                Links
+                            </h4>
+                            <ul className='flex flex-col gap-4 text-gray-900 '>
+                                <li>
+                                    <Link href={'/'}>About EduFocus</Link>
+                                </li>
+                                <li>
+                                    <Link href={'/'}>Privacy policy</Link>
+                                </li>
+                                <li>
+                                    <Link href={'/'}>Contact Us</Link>
+                                </li>
+                                <li>
+                                    <Link href={'/'}>Dropout</Link>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className='flex flex-col gap-5 '>
+                            <h4 className='font-bold whitespace-nowrap text-xl'>
+                                Contact Us
+                            </h4>
+                            <div className='flex gap-4 md:flex-col lg:flex-row'>
+                                <p className=' whitespace-nowrap'>
+                                    Admin :
+                                </p>
+                                <p className='whitespace-nowrap'>
+                                    123-456-7890
+                                </p>
+                            </div>
+                            <div className='flex gap-4 md:flex-col lg:flex-row'>
+                                <p className=' whitespace-nowrap'>
+                                    Address :
+                                </p>
+                                <p className='whitespace-nowrap'>
+                                    Mango, Jamshedpur
+                                </p>
+                            </div>
+                        </div>
+                        <div className='flex flex-col gap-5 '>
+                            <h4 className='font-bold whitespace-nowrap text-xl'>
+                                Links
+                            </h4>
+                            <ul className='flex flex-col gap-4 text-gray-900 '>
+                                <li>
+                                    <Link href={'/'}>About EduFocus</Link>
+                                </li>
+                                <li>
+                                    <Link href={'/'}>Privacy policy</Link>
+                                </li>
+                                <li>
+                                    <Link href={'/'}>Contact Us</Link>
+                                </li>
+                                <li>
+                                    <Link href={'/'}>Dropout</Link>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div className=" w-full px-4">
-                        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                        <nav className="list-none mb-10">
-                            <li>
-                                <a className="text-gray-600 hover:text-gray-800">First Link</a>
-                            </li>
-                            <li>
-                                <a className="text-gray-600 hover:text-gray-800">Second Link</a>
-                            </li>
-                            <li>
-                                <a className="text-gray-600 hover:text-gray-800">Third Link</a>
-                            </li>
-                            <li>
-                                <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
-                            </li>
-                        </nav>
-                    </div>
                 </div>
+                <div className='border border-gray-300' />
+                <p className='w-full text-center text-gray-400'>2023 EduFocus | All rights reserved</p>
             </div>
 
         </footer>
-    );
-};
+    )
+}
 
-export default Footer;
+export default Footer

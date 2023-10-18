@@ -4,7 +4,7 @@ import HeroSection from '@/components/HeroSection'
 
 
 import TestimonialsSection from '@/components/Data'
-import ChartDemo from '@/components/ChartDemo'
+import Charts from '@/components/Charts'
 
 export default function Home() {
   return (
@@ -12,8 +12,8 @@ export default function Home() {
       <Card />
       <HeroSection />
       <hr />
-      <ChartDemo/>
-      <TestimonialsSection />
+      <Charts />
+      {/* <TestimonialsSection /> */}
     </>
   )
 }
