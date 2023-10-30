@@ -2,10 +2,14 @@
 'use client'
 import Link from 'next/link';
 import React, { useState } from 'react';
-
+import { useRouter } from 'next/navigation';
+import auth from '../../../firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import toast from 'react-hot-toast';
 function Login() {
+    const router = useRouter();
     const [formData, setFormData] = useState({
-        username: '',
+        email: '',
         password: '',
     });
 
@@ -14,54 +18,62 @@ function Login() {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Add your login logic here using formData.username and formData.password
-        console.log('Form data submitted:', formData);
+    const handleSubmit = async () => {
+
+        await signInWithEmailAndPassword(auth, formData.email, formData.password)
+            .then((userCredential) => {
+                // Signed in 
+                toast.success("Login Successful")
+                router.push('/dashboard');
+                // ...
+            })
+            .catch((error) => {
+                toast.error("Invalid Credentails")
+            });
     };
 
     return (
-        <div className="bg-gradient-to-r from-blue-500 to-purple-500 min-h-screen flex items-center justify-center pt-28">
-            <div className="bg-white p-8 rounded shadow-lg w-full sm:w-96">
+        <div className="bg-gradient-to-r from-blue-500 to-purple-500 min-h-screen flex items-center justify-center md:pt-28">
+            <div className="bg-white p-8 rounded shadow-lg w-[90%] sm:w-96">
                 <h2 className="text-3xl font-semibold text-center mb-6">Login</h2>
-                <form onSubmit={handleSubmit}>
-                    <div className="mb-4">
-                        <label htmlFor="username" className="block text-gray-700 font-semibold mb-2">
-                            Username
-                        </label>
-                        <input
-                            type="text"
-                            id="username"
-                            name="username"
-                            className="w-full border-none outline-none  rounded-lg px-3 py-2 "
-                            placeholder="Enter your username"
-                            value={formData.username}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <div className="mb-6">
-                        <label htmlFor="password" className="block text-gray-700 font-semibold mb-2">
-                            Password
-                        </label>
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            className="w-full border-none outline-none  rounded-lg px-3 py-2"
-                            placeholder="Enter your password"
-                            value={formData.password}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <button
-                        type="submit"
-                        className="bg-blue-500 text-white rounded-lg py-2 px-4 hover:bg-blue-600 focus:outline-none focus:bg-blue-600 w-full"
-                    >
-                        Login
-                    </button>
-                </form>
+
+                <div className="mb-4">
+                    <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
+                        Email
+                    </label>
+                    <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        className="w-full border-none outline-none  rounded-lg px-3 py-2 "
+                        placeholder="Enter your email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="mb-6">
+                    <label htmlFor="password" className="block text-gray-700 font-semibold mb-2">
+                        Password
+                    </label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        className="w-full border-none outline-none  rounded-lg px-3 py-2"
+                        placeholder="Enter your password"
+                        value={formData.password}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <button
+                    onClick={handleSubmit}
+                    className="bg-blue-500 text-white rounded-lg py-2 px-4 hover:bg-blue-600 focus:outline-none focus:bg-blue-600 w-full"
+                >
+                    Login
+                </button>
+
                 <div className="mt-4 text-center">
                     <Link href="/forgetpage" className="text-blue-500 hover:underline">
                         Forgot Password?

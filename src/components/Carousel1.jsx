@@ -18,11 +18,11 @@ const Card = () => {
                 showThumbs={false}
             >
                 <div>
-                    <Image src={'/img1.webp'} height={400} width={1000} />
+                    <Image src={'/img1.webp'} alt="img" height={300} width={1000} />
                 </div>
 
                 <div>
-                    <Image src={'/img3.jpg'} height={400} width={1000} />
+                    <Image src={'/img3.jpg'} alt="img2" height={300} width={1000} />
                 </div>
             </Carousel>
         </section>

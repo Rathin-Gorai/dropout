@@ -19,7 +19,8 @@ const userSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    required: true
+    required: true,
+    unique: true,
   },
   district: {
     type: String,
@@ -42,5 +43,5 @@ const userSchema = new mongoose.Schema({
     required: true
   }
 });
-const User = mongoose.models.user || mongoose.model("user",userSchema);
+const User = mongoose.models.user || mongoose.model("user", userSchema);
 export default User;

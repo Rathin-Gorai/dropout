@@ -1,16 +1,9 @@
-"use client"
-import { useEffect } from "react"
-import Aos from "aos"
-import 'aos/dist/aos.css'
+
 import Link from 'next/link'
 const Footer = () => {
-    useEffect(() => {
-        Aos.init({
-            duration: 1000,
-        })
-    }, [])
+
     return (
-        <footer className=' mt-10 flex items-center justify-center mb-24' data-aos='fade-right'>
+        <footer className=' mt-10 flex items-center justify-center mb-24' >
             <div className='md:px-[60px] px-[1.25rem] mx-auto max-w-[1440px] flex  flex-col gap-14 w-full'>
                 <div className='flex flex-col items-start justify-center gap-[10%] md:flex-row' >
                     <Link href={'/'} className=' mb-10'>

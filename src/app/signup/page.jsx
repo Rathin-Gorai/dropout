@@ -2,8 +2,12 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
-
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { sendEmailVerification } from 'firebase/auth';
+import auth from '../../../firebase';
+import { useRouter } from 'next/navigation';
 function Registration() {
+    const router = useRouter()
     const [formData, setFormData] = useState({
         name: '',
         gender: '', // Change to select
@@ -15,7 +19,7 @@ function Registration() {
         school: '',
         schoolCode: '',
         password: '',
-        password_1:''
+        password_1: ''
     });
 
     const handleChange = (e) => {
@@ -25,50 +29,62 @@ function Registration() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-    
+
         try {
-          const response = await fetch('/api/user/signup', {
-            method: 'POST',
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                name:formData.name,
-                gender:formData.gender,
-                dob:formData.dob,
-                contact:formData.contact,
-                email:formData.email,
-                district:formData.district,
-                block:formData.block,
-                school:formData.school,
-                schoolCode:formData.schoolCode,
-                password:formData.password
+            const response = await fetch('/api/user/signup', {
+                method: 'POST',
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: formData.name,
+                    gender: formData.gender,
+                    dob: formData.dob,
+                    contact: formData.contact,
+                    email: formData.email,
+                    district: formData.district,
+                    block: formData.block,
+                    school: formData.school,
+                    schoolCode: formData.schoolCode,
+                    password: formData.password
+                })
             })
-          })
-    
-          // Set the status based on the response from the API route
-          if (response.status === 200) {
-            setFormData({
-                name:'',
-                gender:'',
-                dob:'',
-                contact:'',
-                email:'',
-                district:'',
-                block:'',
-                school:'',
-                schoolCode:'',
-                password:'',
-                password_1:''
-            })
-            toast.success(`${formData.name} You have successfully Registerd please verify your email.`)
-          } else {
-            toast.error("Something went Wrong")
-          }
-    
+
+            // Set the status based on the response from the API route
+            if (response.status === 200) {
+                setFormData({
+                    name: '',
+                    gender: '',
+                    dob: '',
+                    contact: '',
+                    email: '',
+                    district: '',
+                    block: '',
+                    school: '',
+                    schoolCode: '',
+                    password: '',
+                    password_1: ''
+                })
+            } else {
+                toast.error("Something went Wrong")
+            }
+
         } catch (e) {
-          console.log(e)
+            console.log(e)
         }
-    
-      }
+        await createUserWithEmailAndPassword(auth, formData.email, formData.password)
+            .then(() => {
+                sendEmailVerification(auth.currentUser)
+                    .then(() => {
+                        toast("You have successfully registered please verify your email")
+                    });
+                router.push('/login')
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+            });
+
+    }
 
     const districtOptions = [
         'District A',
@@ -295,12 +311,12 @@ function Registration() {
                         </div>
                     </div>
                     <div className="flex items-center justify-center">
-                    <button
-                        onClick={handleSubmit}
-                        className="bg-blue-500 text-white rounded-lg py-2 px-4 hover:bg-blue-600 focus:outline-none focus:bg-blue-600 w-[50%] mt-4 "
-                    >
-                        Register
-                    </button>
+                        <button
+                            onClick={handleSubmit}
+                            className="bg-blue-500 text-white rounded-lg py-2 px-4 hover:bg-blue-600 focus:outline-none focus:bg-blue-600 w-[50%] mt-4 "
+                        >
+                            Register
+                        </button>
                     </div>
                 </form>
                 <div className="mt-4 text-center">
