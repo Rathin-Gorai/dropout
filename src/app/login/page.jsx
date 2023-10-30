@@ -1,13 +1,23 @@
 // src/components/Login.js
 'use client'
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import auth from '../../../firebase';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import toast from 'react-hot-toast';
 function Login() {
     const router = useRouter();
+    const check = () => {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                router.push('/dashboard')
+            }
+        });
+    }
+    useEffect(() => {
+        check();
+    }, [])
     const [formData, setFormData] = useState({
         email: '',
         password: '',

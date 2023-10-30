@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 import auth from "../../firebase"
 import { useRouter } from "next/navigation"
+import toast from "react-hot-toast"
 
 
 const Navbar = () => {
@@ -26,6 +27,7 @@ const Navbar = () => {
     const logout = () => {
         signOut(auth).then(() => {
             setIsLogedIn(false)
+            toast.success('Logout successfully')
             router.push('/login')
         }).catch((error) => {
             throw error

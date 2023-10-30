@@ -1,5 +1,7 @@
 
 const About = () => {
+
+
   return (
     <div className="min-h-screen bg-white pt-28">
       <div className="py-12">

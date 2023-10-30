@@ -1,13 +1,23 @@
 'use client'
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, onAuthStateChanged, } from 'firebase/auth';
 import { sendEmailVerification } from 'firebase/auth';
 import auth from '../../../firebase';
 import { useRouter } from 'next/navigation';
 function Registration() {
     const router = useRouter()
+    const check = () => {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                router.push('/dashboard')
+            }
+        });
+    }
+    useEffect(() => {
+        check();
+    }, [])
     const [formData, setFormData] = useState({
         name: '',
         gender: '', // Change to select
